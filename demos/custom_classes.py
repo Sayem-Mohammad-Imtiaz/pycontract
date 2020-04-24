@@ -8,8 +8,8 @@ from src.contracts.syntax import ParsingTmp
 class CustomClass(object):
     pass
 
-@contract(x='int')
-def f(x, y):
+@contract(x='tf_tensor_custom')
+def f(x):
     pass
 
 
