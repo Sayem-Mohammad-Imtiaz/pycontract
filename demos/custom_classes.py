@@ -8,7 +8,7 @@ from src.contracts.syntax import ParsingTmp
 class CustomClass(object):
     pass
 
-@contract(x='tf_tensor_custom')
+@contract(x='tf_tensor')
 def f(x):
     pass
 
@@ -24,5 +24,4 @@ def f(x):
 # print(ParsingTmp.keywords,list(Extension.registrar.keys()))
 my_variable = tf.Variable(tf.zeros([1, 2, 3]))
 a=tf.constant([1, 2, 3, 4, 5, 6])
-# print(type(my_variable))
 f(12)

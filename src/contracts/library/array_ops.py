@@ -241,14 +241,14 @@ np_types = {
     'np_complex64': np.complex64,  # Complex number, represented by two 32-bit floats (real and imaginary components)
     'np_complex128': np.complex128}
 
-td_types = {
-    'tf_tensor_custom': Tensor
+tf_types = {
+    'tf_tensor': Tensor
 }
+for k, t in tf_types.items():
+    add_contract(Keyword(k).setParseAction(CheckType.parse_action(t)))
+    add_keyword(k)
 
 for k, t in np_types.items():
     add_contract(Keyword(k).setParseAction(CheckType.parse_action(t)))
     add_keyword(k)
 
-for k, t in td_types.items():
-    add_contract(Keyword(k).setParseAction(CheckType.parse_action(t)))
-    add_keyword(k)
