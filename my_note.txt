@@ -1,0 +1,5 @@
+1.using pyparsing library to parse decorator body according toa predefined grammar
+2.upon calling a dcorated method, pyparsing first converts decorator text into sequence of methods call that has to be done to check the contract
+
+#To figure out
+1.how pyprasing is being used for parsing?
